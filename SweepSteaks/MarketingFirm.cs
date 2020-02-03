@@ -12,6 +12,13 @@ namespace SweepSteaks
         {
             
         }
+
+        public MarketingFirm(ISweepstakesManager_Manager)
+        { 
+        }
+        public void CreateSweepstakes()
+        { 
+        }
          
     }
 }
