@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SweepSteaks
 {
-    class Contestant
+    public class Contestant : INotifacations
     {
        public string FirstName;
        public string LastName;
@@ -20,9 +20,9 @@ namespace SweepSteaks
             this.EmailAddress = EmailAddress;
         }
 
-        public void EntryCard(string output)
+        public void Notifacations(string message)
         {
-            Console.WriteLine(output);
+            Console.WriteLine(message);
         }
       
     }
