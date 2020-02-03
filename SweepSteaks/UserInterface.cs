@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace SweepSteaks
 {
-    static class usetInterface
+    public static class usetInterface
     {
-        public string GetUserInputFor(string prompt)
-        { 
+        public static string GetUserInputFor(string prompt)
+        {
+            Console.WriteLine(prompt);
+            string input = Console.ReadLine();
+            return input;
         }
     }
 }

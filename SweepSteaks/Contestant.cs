@@ -12,6 +12,18 @@ namespace SweepSteaks
        public string LastName;
        public string EmailAddress;
        public int RegistrationNumber;
+
+        public Contestant(string FirstName, string LastName, string EmailAddress)
+        {
+            this.FirstName = FirstName;
+            this.LastName = LastName;
+            this.EmailAddress = EmailAddress;
+        }
+
+        public void EntryCard(string output)
+        {
+            Console.WriteLine(output);
+        }
       
     }
 }
