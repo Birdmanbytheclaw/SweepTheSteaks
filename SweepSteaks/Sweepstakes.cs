@@ -19,7 +19,7 @@ namespace SweepSteaks
             }
 
         }
-       
+
         public Sweepstakes(string name)
         {
             this.name = name;
@@ -31,7 +31,7 @@ namespace SweepSteaks
             contestants.Add(contestant.RegistrationNumber, contestant);
         }
 
-         public void PrintInfo(Contestant contestant)
+        public void PrintInfo(Contestant contestant)
         {
             Console.WriteLine($"First Name: {contestant.FirstName}" +
                 $"Last Name: {contestant.LastName}" +
@@ -46,24 +46,24 @@ namespace SweepSteaks
             newWinner = contestants[RandomNumber];
             return newWinner;
         }
-         public void EmailContestantsForPrizeOrNot(Contestant Winner, Sweepstakes sweepstakes)
+        public void EmailContestantsForPrizeOrNot(Contestant Winner, Sweepstakes sweepstakes)
         {
             foreach (KeyValuePair<int, Contestant> contestant in contestants)
             {
-            if (contestant.Value == Winner)
-            {
+                if (contestant.Value == Winner)
+                {
                     contestant.Value.Notifacations($"You did it! you beat the odds. you won. woo.. hoo..{contestant.Value.FirstName}, {contestant.Value.LastName} You have won!!" +
                         $"You will Contacted about your prize shortly, probably");
-        
-            }
-            else
-            {
+
+                }
+                else
+                {
                     contestant.Value.Notifacations($"{contestant.Value.FirstName} , {contestant.Value.LastName} YOU lost. Try Again?");
-            }
+                }
 
 
-            }
             }
         }
-    } 
-}
+    }
+} 
+
